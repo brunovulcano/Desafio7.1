@@ -1,0 +1,324 @@
+
+/*---------RESET---------*/
+/* Reset para dejar las caracteristicas predeterminadas de cada navegador en cero
+   El asteriscto es un selector que llama a todos los elementos del html  */
+   *{
+	margin: 0;
+	padding: 0;
+    box-sizing: content-box;
+}
+
+/* ---------LETRAS--------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap'); /*Importamos letra de google fonts*/
+
+/* Regla si quisieramos usar una font descargada en la pc*/
+@font-face {
+	font-family: 'AnotherDay';
+	src: url('../assets/font/AnotherDay.ttf');
+}
+
+
+/*---------TAMANO ELEMENTO RAIZ---------*/
+html{font-size: 62.5%;} /* Tamano del elemento raiz seteado a 10PX */
+
+
+/*---------ESTILOS GENERALES---------*/
+
+#whiskery{
+    color: gold;
+    font-family: AnotherDay; /* modifica familia tipografica*/
+    font-size: 4.5rem;  /*modifica tamano tipografico */
+	font-weight: bold; /*modifica grosor de tipografia*/
+	font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+}
+
+
+body {
+    color: #090909;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main {
+    width: 100%;
+    height: 600px;
+}
+
+#carouselExampleCaptions{
+    min-height: 300px;
+    max-width: 300px;
+    align-items: center;
+}
+
+.min300px{
+    min-height: 300px;
+    max-width: 500px;
+}
+/*COMO LO CENTRO?*/
+
+
+header,
+footer,
+aside,
+section,
+nav {
+    border-radius: 5px;
+}
+
+/*CONSULTA: QUIERO SACAR EL COLOR TURQUESA DE FONDO, DONDE ESTA PUESTO?*/
+
+section,
+aside {
+    background-color: #E0F7FA;
+}
+
+header,
+footer,
+nav {
+    background-color:black;
+}
+
+
+h1 {
+    display: inline;
+}
+
+nav ul li {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a,
+button {
+    text-decoration: none;/* Le saca el subrayado a los elementos anchor como ser los links de las listas */
+    color: #949a9a;
+}
+
+button {
+    border-radius: 5px;
+    background-color: white;
+    padding: 3px;
+}
+
+
+nav {
+    font-size: large;
+    font-weight: 500;
+}
+
+aside {
+    padding: 20px;
+}
+
+aside ul li {
+    padding: 2px;
+    margin-left: -20px;
+}
+
+header {
+    padding: 20px;
+}
+
+nav ul a {
+    padding: 10px;
+}
+
+nav ul {
+    margin-left: -20px;
+}
+
+article {
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#fondo {
+    width: auto;
+    height: auto;
+}
+
+section {
+    padding: 10px;
+}
+
+footer{
+    height: 65px;
+}
+
+/*-----BOTONES REDES SOCIALES-----*/
+/* https://www.youtube.com/watch?v=CiNer2BTAaE */
+
+.buttonsSocialMedia{
+    min-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+.buttonsSocialMedia a{
+    text-decoration: none;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    text-align: center;
+    background: #9c9a9a;
+    color: #f1f1f1;
+    border-radius: 50%;
+    /*box-shadow: 2px 2px 5px rgba(204, 203, 203, 0.5);*/
+    transition: all .4s ease-in-out;
+}
+
+/* Para que cuando se pare arriba del logo se haga mas grande*/
+.buttonsSocialMedia a:hover{
+    transform: scale(1.1);
+} 
+
+/*CONSULTA: COMO AGREGO EL COLOR DE FONDO DE CADA LOGO DE MARCA?*/
+
+/*-----GRIDS-----*/
+
+header,
+nav,
+footer {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    grid-area: header;
+    justify-content: space-between;
+}
+
+footer {
+    grid-area: footer;
+    justify-content: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+section {
+    grid-area: section;
+    column-gap: 8px;
+    row-gap: 8px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+#main,
+section {
+    display: grid;
+}
+
+#main {
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+@media only screen and (min-width:320px) and (max-width:1239px){
+    #main {
+        grid-template-columns: auto;
+        grid-template-rows: 10% 10% auto auto 10%;
+        grid-template-areas: "header" "nav" "aside" "section" "footer";
+    }
+
+    section {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(3, auto);
+
+    }
+
+    /*aside,*/
+    
+    #ulNav,
+    .buttonsSocialMedia,
+    #musica,    
+    #inputHeader {
+        display: none;
+    }
+    nav {
+        justify-content: space-around;
+    }
+}
+
+/*CONSULTA PORQUE NO LO AJUSTA BIEN A LA PANTALLA?*/
+
+/*
+@media only screen and (min-width:768px) and (max-width:1239px){
+    #main {
+        grid-template-columns: auto;
+        grid-template-rows: 15% 10% auto 15%;
+        grid-template-areas: "header" "nav" "section" "footer";
+    
+    /*section {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    aside,
+    #ulNav,
+    #inputHeader {
+        display: none;
+    }
+    nav {
+        justify-content: space-around;
+    }
+}
+*/
+
+@media only screen and (min-width:1240px){
+    #main {
+        grid-template-columns: 15% auto;
+        grid-template-rows: 15% 10% auto auto 15%;
+        grid-template-areas: "header header" "nav nav" "aside aside" "section section" "footer footer";
+    }
+
+/*CONSULTA: EN VEZ DE UN FOOTER POR EJEMPLO, PUEDO LLAMAR A UN CLASS??*/
+
+    section {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    aside,
+    #ulNav,
+    #inputHeader {
+        display: block;
+    }
+    #inputNav,
+    #menuBurger {
+        display: none;
+    }
+    nav {
+        justify-content: flex-end;
+    }
+}
+
+/*animaciones*/
+
+.chivas {
+    filter: grayscale(100%);
+    transition: all 2s;
+}
+
+.chivas:hover {
+    filter: grayscale(0);
+    transform: scale(1.5);
+}
+
+.chivasCont {
+    overflow: hidden;
+}
+
+/*Fin animaciones*/

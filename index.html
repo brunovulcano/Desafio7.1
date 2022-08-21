@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- Tipo de Documento -->
+<html lang="en"> <!-- Etiqueta Inicial -->
+
+<head> <!-- Cabecera, recursos y datos importantes de la web -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web para la venta de bebidas alcoholicas especializada en whisky">
+    <meta name="keywords" content="WHISKY, BEBIDAS, ONLINE, VINOTECA">
+    <title>WHISKERY VENTA ONLINE DE WHISKY</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Insertar/Linkear CSS de forma externa. Esta es la forma recomendada para hacerlo. Lo pongo desp de Boostrap por efecto cascada-->
+
+    <link rel="stylesheet" href="css/style.css">   
+
+   
+    <link rel="shortcut icon" href="assets/img/whisky.jpg"> <!--Icono de Perstana -->
+
+
+    <script src="https://use.fontawesome.com/b29ce011be.js"></script>
+
+    <!-- Para poner iconos redes sociales -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div id="main">
+        <header> <!-- Encabezado Logo + Search --> 
+            <h1 id="whiskery">WHISKERY</h1>
+            <input id="inputHeader" type="search" placeholder="Buscar...">
+        </header>
+        <nav> <!-- Etiqueta para contener enlaces de navegacion --> 
+            <ul id="ulNav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/extras.html">Extras</a></li>
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+           <input id="inputNav" type="search" placeholder="Buscar...">
+            <i id="menuBurger" class="fa fa-bars"></i>
+
+        <!--CONSULTA PORQUE NO APARECE EL MENU HAMBURGUESA EN LA VERSION MOBILE-->
+         <!--CONSULTA PORQUE SE OCULTA EL LINK DEL NAV CUANDO PASO DE UNA PÁGINA A OTRA?-->
+        </nav>
+        <aside>
+            <article> <!--Permite separar diversos elementos independientes que puedan estar contenidos en un mismo <section>-->
+				<br>
+                <img id="fondo" src="media/background.svg" class="img-fluid" alt="Fondo">
+                <br>
+                <hr/> <!-- Linea horizontal para separacion -->		
+                <br>
+				<h4>ELEGÍ Y RECIBÍ TU PEDIDO SIN MOVERTE DE TU CASA.</h4>
+                <br>             
+			</article>
+        </aside>
+
+        <section>
+            <article>
+                <img src="images/Blenders.webp">
+                <h5>Whisky Blenders americano 750 cc.</h5>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="images/Chivas.webp" class="chivas">
+                <h5>Whisky 12 años Chivas regal 500 cc.</h5>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="images/Jamerson.webp">
+                <h5>Whisky Jameson black barrel 700 cc.</h5>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="images/JB.webp">
+                <h5>Whisky 6 años J&b 750 cc.</h5>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="images/JW-BLackLabel.webp">
+                <h5>Whisky Johnnie Walker double black label 750 cc.</h5>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="images/JW-DobleBLackLabel.webp">
+                <h5>Whisky Johnnie Walker double black label 750 cc.</h5>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="images/JW-RedLabel.webp">
+                <h5>Whisky Johnnie Walker red label 750 cc.</h5>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="images/Pipers.webp">
+                <h5>Whisky 100 Pippers 750 cc.</h5>
+                <button>Comprar</button>                
+            </article>
+            <article>
+                <img src="images/Singleton.webp">
+                <h5>Whisky 12 years old Singleton 700 cc.</h5>
+                <button>Comprar</button>                
+            </article>
+        </section>
+
+        <footer>
+            <div class="buttonsSocialMedia">
+				<a class="btn btn-primary btn-lg btn-floating" href="#" role="button"><i class="fa fa-facebook"></i></a>
+				<a class="btn btn-primary btn-lg btn-floating" href="#" role="button"><i class="fa fa-instagram"></i></a>
+                <a class="btn btn-primary btn-lg btn-floating whatsapp" href="#" role="button"><i class="fa fa-whatsapp"></i></a>
+                <a class="btn btn-primary btn-lg btn-floating" href="#" role="button"><i class="fa fa-youtube"></i></a>
+            </div>
+
+            <audio id="musica" src="media/saxophone.mp3" controls autoplay>  <!--Insertar musica-->
+                Tu navegador no es compatible.
+            </audio>
+        <!--CONSULTA: COMO HAGO PARA QUE DESAPAREZCA EL REPRODUCTO O QUE QUEDE MAS ESTETICO?-->
+
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
